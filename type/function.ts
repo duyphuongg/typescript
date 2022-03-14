@@ -2,8 +2,12 @@ function add(n1: number, n2: number) {
   return n1 + n2;
 }
 
-function printResult(res: number): void {
-  console.log("Result is : " + res)
+function printResult(res: number, customText?: string): void {
+  if (customText) {
+    console.log(customText + res);
+  } else {
+    console.log("Result is : " + res)
+  }
 }
 
 let combineValues: (a: number, b: number) => number;
